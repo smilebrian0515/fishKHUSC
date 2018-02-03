@@ -32,8 +32,13 @@ class Register extends CI_Controller {
 		$type = $this->input->post("type");
 		$pwd = do_hash($pwd);
 		$this->register_model->insert($email,$pwd,$type);
-		$data = array("type"=>$type);
-		$this->parser->parse("home",$data);
+		$cookie = array(
+			'name' => 'KHUSC',
+			'value' => '1',
+			'expire' => 86400,
+		);
+		$this->input->set_cookie("KHUSC");
+		$this->load->view("home");
 	}
 	
 	public function checkAccount () 

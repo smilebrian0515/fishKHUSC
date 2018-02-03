@@ -22,4 +22,22 @@ class Login extends CI_Controller {
 	{
 		$this->load->view('login');
 	}
+	
+	public function check () 
+	{
+		$this->load->helper('security');
+		$this->load->model("login_model");
+		$email = $this->input->post("email");
+		$pwd = $this->input->post("password");
+		$pwd = do_hash($pwd);
+		$type = $this->login_model->login($email,$pwd);
+		if($type == -1){
+			$this->load->view("login_error");
+		}else{
+			$data = array ("type"=>$type[0]['type']);
+			$this->parser->parse("home",$data);
+		}
+		
+		
+	}
 }

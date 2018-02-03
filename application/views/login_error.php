@@ -8,7 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-	<form align="center" method="post" action="/fish/index.php/login/check/">
+	<form align="center" method="post" action="./check/">
+		<div style="color:red">帳號或密碼錯誤</div>
 		<input type="email" placeholder="電子郵件地址" name="email"><br>
 		<input type="password" placeholder="密碼" name="password"><br>
 		<input type="submit" value="送出">
