@@ -25,15 +25,21 @@ class Register extends CI_Controller {
 	
 	public function insert () 
 	{
-		$this->load->model("register");
-		echo "123";
+		$this->load->helper('security');
+		$this->load->model("register_model");
 		$email = $this->input->post("email");
 		$pwd = $this->input->post("password");
 		$type = $this->input->post("type");
-		$register->insert($email,mda5($pwd),type);
-		
-		
-		//$this->db->query("");
-		
+		$pwd = do_hash($pwd);
+		$this->register_model->insert($email,$pwd,$type);
+		$data = array("type"=>$type);
+		$this->parser->parse("home",$data);
+	}
+	
+	public function checkAccount () 
+	{
+		$this->load->model("register_model");
+		$Acc = $this->input->post("acc");
+		echo $this->register_model->checkAccount($Acc);
 	}
 }

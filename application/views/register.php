@@ -19,13 +19,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			if (email != re_email) 
 			{
 				alert("email不一致");
+				return false;
 			}
+			$.post("./checkAccount/",{acc:email},function(data,status){
+				//console.log(data);
+				if(data){
+					alert("帳號已經存在");
+					return false;
+				}
+			})
 			
 			var password = document.forms["myForm"]["password"].value;
 			var re_password = document.forms["myForm"]["repassword"].value;
 			if (password != re_password) 
 			{
 				alert("密碼不一致");
+				return false;
 			}
 			
 			var type = document.forms["myForm"]["type"].value;
