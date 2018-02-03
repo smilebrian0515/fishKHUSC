@@ -54,9 +54,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="確認電子郵件地址" name="re_email" required>
 				  <!--密碼-->
 				  <label><b>Password</b></label>
-				  <input class="w3-input w3-border" type="text" placeholder="請輸入Password" name="password" required>
+				  <input class="w3-input w3-border" type="password" placeholder="請輸入Password" name="password" required>
 				  <label><b>確認Password</b></label>
-				  <input class="w3-input w3-border" type="text" placeholder="確認Password" name="repassword" required>
+				  <input class="w3-input w3-border" type="password" placeholder="確認Password" name="repassword" required>
 				  <label><b>請選擇身分</b></label><br>
 				  <select name="type" >
 					<option value="-1">請選擇身分</option>

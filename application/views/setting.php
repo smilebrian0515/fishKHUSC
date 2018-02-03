@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<td><a href="./exEmail/">變更您的信箱</a></td>
 		</tr>
 		<tr>
-			<td>變更您的密碼</td>
+			<td><a href="./exPassword">變更您的密碼</a></td>
 		</tr>
 		<tr>
 			<td><a href="./exDetails/">修改詳細資料</a></td>

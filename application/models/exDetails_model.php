@@ -15,7 +15,6 @@ class exDetails_model extends CI_Model {
 		$query = $this->db->query("SELECT * FROM researchers WHERE `rname` = $name");
 		if ($query->num_rows() >0 )
 		{
-			echo "test";
 			$this->db->query("UPDATE `researchers` SET `introduction` = '$introduction' , `recom` = '$recommend' , `exp` = '$exp' , `rchexp` = '$rexp' ,`time` ='$time' WHERE `rname` = '$name'");
 			echo '<script language="javascript">';
 			echo 'alert("資料修改成功")';

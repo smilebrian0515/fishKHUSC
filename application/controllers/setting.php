@@ -45,5 +45,35 @@ class Setting extends CI_Controller {
 	{
 		$this->load->view('exEmail');
 	}
-
+	public function exPassword()
+	{
+		//$this->load->helper('security');
+		$this->load->view('exPassword');
+		$this->load->model('exPass_model');
+		$account = $this->input->post('account');
+		$Pass = $this->input->post('Pass');
+		//$Pass = do_hash($Pass);
+		$newPass = $this->input->post('newPass');
+		$newPassCon = $this->input->post('newPassCon');
+		$this->exPass_model->checkAcc($account,$Pass,$newPass,$newPassCon); 
+	}
+	public function exPass()
+	{
+	/*	$account = $this->input->post('account');
+		$Pass = $this->input->post('Pass');
+		$newPass = $this->input->post('newPass');
+		$newPassCon = $this->input->post('newPassCon');
+		if($newPass !== $newPassCon)
+		{
+			echo '<script language="javascript">';
+			echo 'alert("密碼輸入不同!")';
+			echo '</script>';
+			$this->load->view('exPassword');
+		}
+		else
+		{
+			echo $pwd;
+		}*/
+		//$this->exPassword_model->checkAccount($account,$Pass,$newPass)
+	}
 }
