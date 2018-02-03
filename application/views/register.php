@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-	<form name="myForm" align="center" method="post" action="./insert/" onsubmit="return check()">
+	<form name="myForm" align="center" method="post" action="/fish/index.php/register/insert/" onsubmit="return check()">
 		<input type="email" placeholder="電子郵件地址" name="email" required><br>
 		<input type="email" placeholder="確認電子郵件地址" name="re_email" required><br>
 		<input type="password" placeholder="密碼" name="password" required><br>

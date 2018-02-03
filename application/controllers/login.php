@@ -30,12 +30,16 @@ class Login extends CI_Controller {
 		$email = $this->input->post("email");
 		$pwd = $this->input->post("password");
 		$pwd = do_hash($pwd);
-		$type = $this->login_model->login($email,$pwd);
-		if($type == -1){
+		$result = $this->login_model->login($email,$pwd);
+		if($result == -1){
 			$this->load->view("login_error");
 		}else{
-			$data = array ("type"=>$type[0]['type']);
-			$this->parser->parse("home",$data);
+			$data = array("id"=>$result[0]["index"]);
+			if($result[0]['type']==0){
+				$this->parser->parse("home_F",$data);
+			}else {
+				$this->parser->parse("home_R",$data);
+			}
 		}
 		
 		

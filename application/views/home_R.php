@@ -5,20 +5,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
+
 </head>
 <body>
-
-	<table>
-		<tr>
-			<td>變更您的信箱</td>
-		</tr>
-		<tr>
-			<td>變更您的密碼</td>
-		</tr>
-		<tr>
-			<td>修改詳細資料</td>
-		</tr>
-	</table>
-
+	
+	<a href="/fish/index.php/setting/researchers/{index}">設定</a>
+	<a href="/fish/index.php/login/">配對</a>
 </body>
 </html>

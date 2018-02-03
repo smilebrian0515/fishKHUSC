@@ -1,5 +1,5 @@
 <?php
-class Login_model extends CI_Model {
+class Setting_model extends CI_Model {
 
     function __construct()
     {
@@ -8,7 +8,7 @@ class Login_model extends CI_Model {
     }
     
 	function login ($email,$pwd) {
-		$sql="SELECT `type`,`index` FROM `user` WHERE `account`='$email' AND `password`='$pwd'";
+		$sql="SELECT `type` FROM `user` WHERE `account`='$email' AND `password`='$pwd'";
 		
 		$query = $this->db->query($sql);
 		
