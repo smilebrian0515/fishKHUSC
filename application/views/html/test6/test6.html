@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>漁產業者資料</title>
+<link type="text/css" rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('.tab:first').show();
+		$('#tabs li a:first').addClass('active');
+		$('ul#tabs li a').click(function(){
+			var index=$('ul#tabs li a').index(this);
+			$('ul#tabs li a').removeClass('active');
+			$(".tab:visible").hide();
+			$(".tab:eq("+index+")").show();
+			$(this).addClass('active');
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+<div id="container">
+	<ul id="tabs" class="fix">
+		<li><a href="#">捕撈魚種</a></li>
+		<li><a href="#">作業地點</a></li>
+		<li><a href="#">作業船型</a></li>
+		<li><a href="#">研究需求</a></li>
+	</ul>
+	<div class="content">
+		<div class="tab">
+		<p>123</p>
+		</div>
+		<div class="tab">
+		<p>456</p>
+		</div>
+		<div class="tab">
+		<p>789</p>
+		</div>
+		<div class="tab">
+		<p>10 11 12</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
