@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PersonalPage</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				$('#data1').bind('click',function(){
+					$('#show').html("資料內容");
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+
+		<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+			<div class="w3-third">
+				<div class="w3-white w3-text-grey w3-card-4">
+					<div class="w3-display-container">
+						<img src="pic_test8.jpg" style="width:100%">
+						<div class="w3-display-bottomleft w3-container w3-text-black">
+							<h2>Name</h2>
+						</div>
+					</div>
+					<div class="w3-container" id="data">
+						<a href="#" ><p id="data1">第1筆資料</p>
+						<a href="#" ><p id="data2">第2筆資料</p>
+						<a href="#" ><p id="data3">第3筆資料</p>
+						<a href="#" ><p id="data4">第4筆資料</p>
+					</div>
+				</div>
+				<div class="w3-bar w3-blue">
+					<button class="w3-button w3-right"><a href="test9.html">返回</a></button>
+					<button class="w3-button w3-right">刪除</button>
+					<button class="w3-button w3-right">修改</button>
+					<button class="w3-button w3-right"><a href="test4.html">新增</a></button>
+				</div>
+			</div>
+
+
+			<div class="w3-twothird">
+				<div class="w3-container w3-card">
+					
+					<h2 class="w3-text-grey w3-padding-16">資料顯示位置</h2>
+					<div class="w3-container">
+						<p id="show"></p>
+						<hr>
+					</div>
+				</div>  
+				
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
