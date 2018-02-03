@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
-	<a href="./index.php/register/">註冊</a>
-	<a href="./index.php/login/">登入</a>
+	<a href="./setting/">設定</a>
+	<a href="./login/">配對</a>
 </body>
 </html>
