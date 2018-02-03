@@ -55,9 +55,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				  <!--密碼-->
 				  <label><b>Password</b></label>
 				  <input class="w3-input w3-border" type="text" placeholder="請輸入Password" name="password" required>
-				  <label><b>確認Password</b></label>
 				  <input class="w3-input w3-border" type="text" placeholder="確認Password" name="repassword" required>
-				  <label><b>請選擇身分</b></label><br>
+				  請選擇身分<br>
 				  <select name="type" >
 					<option value="-1">請選擇身分</option>
 					<option value="0">漁產業者</option>
@@ -67,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</form>
 		  <br><br>已經有帳戶?
-		  <button class="w3-button w3-green w3-large"><a href="/fish/index.php/login">前往登入畫面</button>
+		  <button class="w3-button w3-green w3-large"><a href="test2.html">前往登入畫面</button>
 		</div>
 	</body>
 </html>

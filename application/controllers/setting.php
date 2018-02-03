@@ -22,4 +22,8 @@ class Setting extends CI_Controller {
 	{
 		$this->load->view('setting');
 	}
+	public function exDetails()
+	{
+			$this->load->view('exDetails');
+	}
 }
