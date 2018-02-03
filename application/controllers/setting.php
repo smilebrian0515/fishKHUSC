@@ -24,6 +24,26 @@ class Setting extends CI_Controller {
 	}
 	public function exDetails()
 	{
-			$this->load->view('exDetails');
+		$this->load->view('exDetails');
+		$this->load->model('exDetails_model');
+		$name = $this->input->post('name');
+		$introduction = $this->input->post('introduction');
+		$recommend = $this->input->post('recommend');
+		$exp = $this->input->post('exp');
+		$rexp = $this->input->post('rexp');
+		$time = $this->input->post('time');
+		
+		if($this->input->post('name') !== NULL)
+		{
+			$this->exDetails_model->checkname($name,$introduction,$recommend,$exp,$rexp,$time);
+			//$this->exDetails_model->insert($name,$introduction,$recommend,$exp,$rexp,$time);
+
+		}
+		
 	}
+	public function exEmail()
+	{
+		$this->load->view('exEmail');
+	}
+
 }

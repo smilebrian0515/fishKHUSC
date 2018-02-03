@@ -47,10 +47,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<form class="w3-container" name="myForm" align="center" method="post" action="./insert/" onsubmit="return check()">
 				<div class="w3-section">
 				  <!--姓名-->
-				  <label><b>Name</b></label>
+				  <label><b>電子郵件地址</b></label>
 				  <input class="w3-input w3-border w3-margin-bottom" type="text" name="email" placeholder="電子郵件地址" required>
 				  <!--帳號-->
-				  <label><b>Account</b></label>
+				  <label><b>確認電子郵件地址</b></label>
 				  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="確認電子郵件地址" name="re_email" required>
 				  <!--密碼-->
 				  <label><b>Password</b></label>
