@@ -20,6 +20,7 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
+		echo base_url("blog/post/123");
 		$this->load->view('home');
 	}
 }

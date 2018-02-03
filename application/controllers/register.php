@@ -22,4 +22,18 @@ class Register extends CI_Controller {
 	{
 		$this->load->view('register');
 	}
+	
+	public function insert () 
+	{
+		$this->load->model("register");
+		echo "123";
+		$email = $this->input->post("email");
+		$pwd = $this->input->post("password");
+		$type = $this->input->post("type");
+		$register->insert($email,mda5($pwd),type);
+		
+		
+		//$this->db->query("");
+		
+	}
 }
