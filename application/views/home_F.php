@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 	
-	<a href="/fish/index.php/setting/fisherman/{index}">設定</a>
+	<a href="/fish/index.php/setting/fisherman/{id}">設定</a>
 	<a href="/fish/index.php/login/">配對</a>
 </body>
 </html>

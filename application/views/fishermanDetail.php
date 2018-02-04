@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-	<form name="myForm" align="center" method="post" action="/fish/index.php/setting/update/">
+	<form name="myForm" align="center" method="post" action="/fish/index.php/setting/updatefisher/">
 		<input type="text" placeholder="姓名(ex:吳謹誠)" name="name" value="吳謹誠"><br>
 		<input type="text" placeholder="船員編號" name="fisherID" value="a1234567890"><br>
 		<input type="text" placeholder="國家" name="country" value="臺灣"><br>
@@ -27,6 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<input type="text" placeholder="深度(ex:150公尺)" name="length" value=""><br>
 		<input type="submit" value="送出">
 		<input type="reset" value="清空">
+		<input type="text" name="index" value="{id}" hidden>
 	</form>
 
 </body>

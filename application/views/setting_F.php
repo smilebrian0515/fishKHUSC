@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<td>變更您的密碼</td>
 		</tr>
 		<tr>
-			<td><a href="/fish/index.php/setting/fishermanDetail/{index}">修改詳細資料</a></td>
+			<td><a href="/fish/index.php/setting/fishermanDetail/{id}">修改詳細資料</a></td>
 		</tr>
 	</table>
 
