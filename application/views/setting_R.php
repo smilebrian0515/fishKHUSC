@@ -18,6 +18,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<tr>
 			<td><a href="/fish/index.php/setting/researchersDetail/{id}">修改詳細資料</a></td>
 		</tr>
+		<tr>
+			<td><a href="/fish/index.php/home/researchers/{id}">回到首頁</a></td>
+		</tr>
 	</table>
 
 </body>

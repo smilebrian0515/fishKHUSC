@@ -21,6 +21,20 @@ class Setting_model extends CI_Model {
 		}
 	}
 	
+	function checkResearchers ($index) {
+		$sql="SELECT `index` FROM `researchers` WHERE `index`=$index ";
+		
+		$query = $this->db->query($sql);
+		
+		if ($query->num_rows() > 0)
+		{
+			return true;
+		} else
+		{
+			return false;
+		}
+	}
+	
 	function insertFisherman ($index,$name,$fisherID,$country,$boat,$boatID) {
 		$sql="INSERT INTO `fishman`(`index`, `name`, `id`, `country`, `boat`, `boatID`) VALUES ($index,'$name','$fisherID','$country','$boat','$boatID')";
 		
@@ -29,6 +43,18 @@ class Setting_model extends CI_Model {
 
 	function updateFisherman ($index,$name,$fisherID,$country,$boat,$boatID) {
 		$sql="UPDATE `fishman` SET `name`='$name',`id`='$fisherID',`country`='$country',`boat`='$boat',`boatID`='$boatID' WHERE `index`=$index";
+		
+		$query = $this->db->query($sql);
+	}
+	
+	function insertResearchers ($index,$name,$country,$experience,$project,$contact,$recommended,$introduction) {
+		$sql="INSERT INTO `researchers`(`index`, `name`, `country`, `experience`, `project`, `contact`, `recommended`, `introduction`) VALUES ($index,'$name','$country','$experience','$project','$contact','$recommended','$introduction')";
+		
+		$query = $this->db->query($sql);
+	}
+
+	function updateResearchers ($index,$name,$country,$experience,$project,$contact,$recommended,$introduction) {
+		$sql="UPDATE `researchers` SET `name`='$name',`country`='$country',`experience`='$experience',`project`='$project',`contact`='$contact',`recommended`='$recommended',`introduction`='$introduction' WHERE `index`=$index";
 		
 		$query = $this->db->query($sql);
 	}

@@ -22,4 +22,14 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('home');
 	}
+	public function fisherman($index)
+	{
+		$data = array("id"=>$index);
+		$this->parser->parse('home_F',$data);
+	}
+	public function researchers($index)
+	{
+		$data = array("id"=>$index);
+		$this->parser->parse('home_R',$data);
+	}
 }

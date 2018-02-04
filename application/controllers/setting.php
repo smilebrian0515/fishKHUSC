@@ -98,4 +98,35 @@ class Setting extends CI_Controller {
 		$data = array("id"=>$index);
 		$this->parser->parse('setting_F',$data);
 	}
+	
+	public function updateresearchers () 
+	{
+		$this->load->model("setting_model");
+		//確認是否已經存在
+		$index = $this->input->post("index");
+		$exist = $this->setting_model->checkResearchers($index);
+		//echo $index;
+		
+		$name = $this->input->post("name");
+		$country = $this->input->post("country");
+		$experience = $this->input->post("experience");
+		$project = $this->input->post("project");
+		$contact = $this->input->post("contact");
+		$recommended = $this->input->post("recommended");
+		$introduction = $this->input->post("introduction");
+		//放入資料
+		if($exist)
+		{
+			$this->setting_model->updateResearchers($index,$name,$country,$experience,$project,$contact,$recommended,$introduction);
+		}else 
+		{
+			$this->setting_model->insertResearchers($index,$name,$country,$experience,$project,$contact,$recommended,$introduction);
+		}
+		
+		
+		
+		
+		$data = array("id"=>$index);
+		$this->parser->parse('setting_R',$data);
+	}
 }
